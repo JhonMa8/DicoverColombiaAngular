@@ -1,0 +1,98 @@
+/* src/app/components/cookie-consent/cookie-consent.component.css */
+
+.cookie-consent-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Color de fondo oscuro */
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInUp 0.5s ease-out forwards; /* Animación de entrada */
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.consent-content {
+  max-width: 900px; /* Ancho máximo para el contenido del banner */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.consent-content p {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.consent-content a {
+  color: #FFCD00; /* Color de enlace para la política de privacidad */
+  text-decoration: underline;
+}
+
+.consent-buttons {
+  display: flex;
+  gap: 15px; /* Espacio entre los botones */
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.accept-btn {
+  background-color: #FFCD00; /* Color de botón de aceptar */
+  color: #333;
+}
+
+.accept-btn:hover {
+  background-color: #e6b800; /* Un poco más oscuro al pasar el ratón */
+  transform: translateY(-2px);
+}
+
+.decline-btn {
+  background-color: #555; /* Color de botón de rechazar */
+  color: white;
+}
+
+.decline-btn:hover {
+  background-color: #777; /* Un poco más claro al pasar el ratón */
+  transform: translateY(-2px);
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .cookie-consent-banner {
+    padding: 10px;
+  }
+  .consent-content {
+    flex-direction: column;
+  }
+  .consent-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
+}

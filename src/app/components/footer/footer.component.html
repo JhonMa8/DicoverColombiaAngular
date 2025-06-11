@@ -1,0 +1,30 @@
+<!-- src/app/components/footer/footer.component.html -->
+
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h3>Sobre Discover Colombia</h3>
+      <p>Explora la magia de Colombia con nosotros. Desde la vibrante cultura de sus ciudades hasta la exuberante belleza natural de sus paisajes, te ayudamos a planificar tu aventura perfecta. ¡Descubre por qué Colombia lo tiene todo!</p>
+      <div class="contact-info">
+        <span><i class="fas fa-map-marker-alt"></i> Floridablanca, Santander, Colombia</span>
+        <span><i class="fas fa-phone"></i> +57 310 123 4567</span>
+        <!-- CORREGIDO: Cambiado @ por &#64; para evitar el error de Angular -->
+        <span><i class="fas fa-envelope"></i> info&#64;discovercolombia.com</span>
+      </div>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Síguenos</h3>
+      <div class="social-links">
+        <a href="https://facebook.com/discovercolombia" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/discovercol" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/discovercolombia" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/discovercolombia" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ currentYear }} Discover Colombia. Todos los derechos reservados.</p>
+  </div>
+</footer>

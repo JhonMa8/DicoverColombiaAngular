@@ -1,0 +1,8 @@
+<div class="city-card" [routerLink]="['/city', city.id]">
+  <img [src]="city.imageUrls[0]" [alt]="city.name">
+  <div class="card-content">
+    <h3>{{ city.name }}</h3>
+    <p>{{ city.description }}</p>
+    <div class="climate-tag">{{ city.climate }}</div>
+  </div>
+</div>

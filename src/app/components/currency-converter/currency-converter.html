@@ -1,0 +1,24 @@
+<div class="converter-container">
+  <h2>Convertidor de Moneda (USD a COP)</h2>
+
+  <div class="input-group">
+    <label for="usdAmount">Cantidad en Dólares (USD):</label>
+    <input
+      type="number"
+      id="usdAmount"
+      [(ngModel)]="usdAmount"
+      placeholder="Ej: 100"
+      min="0"
+      (input)="convertCurrency()"
+      class="currency-input"
+    >
+  </div>
+
+  <div class="result-group">
+    <p>Equivale a:</p>
+    <p class="converted-amount">{{ convertedAmount | currency:'COP':'symbol':'1.2-2' }}</p>
+    <p class="exchange-rate">Tipo de cambio actual: 1 USD = {{ exchangeRate | currency:'COP':'symbol':'1.2-2' }}</p>
+  </div>
+
+  <button class="btn back-to-home-btn" routerLink="/">Volver al Inicio</button>
+</div>

@@ -1,0 +1,95 @@
+/* src/app/components/currency-converter/currency-converter.component.css */
+
+.converter-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 450px;
+  margin: 40px auto; /* Centra el convertidor en la página */
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+h2 {
+  color: #003087; /* Color principal de tu marca */
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.currency-input {
+  width: calc(100% - 20px); /* Ajusta el ancho para el padding */
+  padding: 12px 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.currency-input:focus {
+  border-color: #FFCD00; /* Color de tu marca al enfocar */
+  box-shadow: 0 0 8px rgba(255, 205, 0, 0.4);
+}
+
+.result-group {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.result-group p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.converted-amount {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003087; /* Color principal para el resultado */
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.exchange-rate {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Estilos para el nuevo botón "Volver al Inicio" */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 25px; /* Espacio superior para separarlo del contenido */
+}
+
+.back-to-home-btn {
+  background-color: #003087; /* Color principal de tu marca para el botón */
+  color: white;
+  text-decoration: none; /* Asegura que no tenga subrayado si routerLink lo añade */
+  display: inline-block; /* Para que el padding y margen funcionen bien */
+}
+
+.back-to-home-btn:hover {
+  background-color: #001f5c; /* Un tono más oscuro al pasar el ratón */
+  transform: translateY(-2px);
+}

@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilos para el contenedor principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* AÑADIDO: Estilos para el botón "Volver Arriba" (AHORA SIEMPRE VISIBLE) */
+.scroll-to-top {
+  position: fixed; /* Lo posiciona de forma fija en la ventana */
+  bottom: 20px;    /* 20px desde la parte inferior */
+  right: 20px;     /* 20px desde la parte derecha */
+  background-color: #007bff; /* Color de fondo azul (puedes ajustar) */
+  color: white;    /* Color del texto/icono */
+  border: none;
+  border-radius: 50%; /* Lo hace redondo */
+  width: 50px;     /* Ancho del botón */
+  height: 50px;    /* Alto del botón */
+  font-size: 1.8rem; /* Tamaño de la flecha */
+  display: flex;   /* Para centrar la flecha */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;   /* Centrar verticalmente */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para que se vea flotante */
+  z-index: 9999; /* Asegura que esté por encima de casi todo */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Solo transiciones al pasar el ratón */
+  /* YA NO NECESITAMOS opacity: 0; ni pointer-events: none; por defecto,
+     porque queremos que el botón esté siempre visible y sea clickeable. */
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* YA NO NECESITAMOS esta regla porque el botón está siempre visible */
+/* .scroll-to-top[ng-reflect-ng-if="true"] {
+  opacity: 1;
+  pointer-events: auto;
+} */

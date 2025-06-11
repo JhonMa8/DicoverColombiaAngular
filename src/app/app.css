@@ -1,0 +1,40 @@
+/* src/app/app.css */
+
+/* (Deja cualquier estilo global que ya tengas aquí) */
+
+/* Estilos para el botón "Volver Arriba" */
+.scroll-to-top {
+  position: fixed; /* Lo posiciona de forma fija en la ventana */
+  bottom: 20px;    /* 20px desde la parte inferior */
+  right: 20px;     /* 20px desde la parte derecha */
+  background-color: #007bff; /* Color de fondo azul (puedes ajustar) */
+  color: white;    /* Color del texto/icono */
+  border: none;
+  border-radius: 50%; /* Lo hace redondo */
+  width: 50px;     /* Ancho del botón */
+  height: 50px;    /* Alto del botón */
+  font-size: 1.8rem; /* Tamaño de la flecha */
+  display: flex;   /* Para centrar la flecha */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;   /* Centrar verticalmente */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para que se vea flotante */
+  z-index: 9999; /* <-- Aumentado para asegurar que esté por encima */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave para aparecer/desaparecer */
+  opacity: 0; /* Por defecto, oculto */
+  pointer-events: none; /* No interactuable cuando está oculto */
+}
+
+.scroll-to-top:hover {
+  background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+  transform: scale(1.1); /* Ligeramente más grande al pasar el ratón */
+}
+
+/* Para que el botón aparezca/desaparezca suavemente
+   ng-reflect-ng-if es un atributo que Angular añade cuando *ngIf es true.
+   Esto permite que la transición de opacidad funcione al cambiar de estado.
+*/
+.scroll-to-top[ng-reflect-ng-if="true"] {
+  opacity: 1;
+  pointer-events: auto; /* Hace que sea clickeable cuando es visible */
+}

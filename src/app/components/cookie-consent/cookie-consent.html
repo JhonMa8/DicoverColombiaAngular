@@ -1,0 +1,12 @@
+<div class="cookie-consent-banner" *ngIf="showBanner">
+  <div class="consent-content">
+    <p>
+      Usamos cookies para mejorar tu experiencia de navegación y ofrecerte contenido relevante. Al continuar navegando por este sitio, aceptas nuestro uso de cookies. Para más información, consulta nuestra
+      <a href="/politica-de-privacidad" target="_blank">Política de Privacidad</a>.
+    </p>
+    <div class="consent-buttons">
+      <button class="btn accept-btn" (click)="acceptCookies()">Aceptar</button>
+      <button class="btn decline-btn" (click)="declineCookies()">Rechazar</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<nav>
+  <a routerLink="/" class="navbar-brand">
+    <img src="/images/img-log.png" alt="Logo Discover Colombia" class="navbar-logo">
+    <h1>Discover Colombia</h1>
+  </a>
+  <div class="nav-links">
+    <a *ngFor="let city of cities" [routerLink]="['/city', city.id]">{{ city.name }}</a>
+    <a routerLink="/converter" class="nav-item">Convertidor</a> 
+  </div>
+</nav>

@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: #FFCD00;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  display: flex; /* Para alinear el logo y el título h1 */
+  align-items: center; /* Centra verticalmente el logo y el h1 */
+  color: black; /* Asegura que el texto "Discover Colombia" siga siendo negro */
+  text-decoration: none;
+}
+
+.navbar-logo {
+  height: 80px; /* Ajusta este valor si necesitas un tamaño diferente para tu logo */
+  width: auto; /* Mantiene la proporción del logo */
+  margin-right: 10px; /* Espacio entre el logo y el texto "Discover Colombia" */
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+nav a:first-child {
+  margin-left: 0;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+}

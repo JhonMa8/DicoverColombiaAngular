@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<div class="banner">
+  <h1>Descubre la Magia de Colombia</h1>
+  <p>Explora nuestras ciudades llenas de cultura, naturaleza y alegría</p>
+</div>
+
+<div class="cities-container">
+  <app-city-card *ngFor="let city of cities" [city]="city"></app-city-card>
+</div>
+
+<app-footer></app-footer>

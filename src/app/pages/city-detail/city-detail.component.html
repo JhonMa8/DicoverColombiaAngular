@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="city" class="city-detail">
+  <div class="city-header">
+    <h1>{{ city.name }}</h1>
+
+    <div class="carousel-manual-container" *ngIf="city.imageUrls && city.imageUrls.length > 0">
+      <div class="carousel-inner">
+        <img [src]="city.imageUrls[currentSlideIndex]" 
+             [alt]="city.name + ' image ' + (currentSlideIndex + 1)"
+             class="carousel-image">
+      </div>
+      
+      <button class="carousel-control prev" (click)="prevSlide()">&#10094;</button>
+      <button class="carousel-control next" (click)="nextSlide()">&#10095;</button>
+
+      <div class="carousel-indicators">
+        <span *ngFor="let img of city.imageUrls; let i = index"
+              [class.active]="i === currentSlideIndex"
+              (click)="goToSlide(i)"></span>
+      </div>
+    </div>
+    </div>
+
+  <div class="city-info-accordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" (click)="toggleAccordion('description')">
+        Descripción
+        <span class="accordion-icon" [class.rotated]="accordionStates['description']">▼</span>
+      </h2>
+      <div class="accordion-content" [class.expanded]="accordionStates['description']">
+        <p>{{ city.description }}</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" (click)="toggleAccordion('climate')">
+        Clima
+        <span class="accordion-icon" [class.rotated]="accordionStates['climate']">▼</span>
+      </h2>
+      <div class="accordion-content" [class.expanded]="accordionStates['climate']">
+        <p>{{ city.climate }}</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" (click)="toggleAccordion('bestTime')">
+        Mejor época para visitar
+        <span class="accordion-icon" [class.rotated]="accordionStates['bestTime']">▼</span>
+      </h2>
+      <div class="accordion-content" [class.expanded]="accordionStates['bestTime']">
+        <p>{{ city.bestTime }}</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" (click)="toggleAccordion('attractions')">
+        Atractivos principales
+        <span class="accordion-icon" [class.rotated]="accordionStates['attractions']">▼</span>
+      </h2>
+      <div class="accordion-content" [class.expanded]="accordionStates['attractions']">
+        <ul>
+          <li *ngFor="let attraction of city.attractions">{{ attraction }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+<app-footer></app-footer>
